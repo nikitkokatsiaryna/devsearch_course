@@ -11,6 +11,7 @@ https://docs.djangoproject.com/en/3.2/ref/settings/
 """
 import os
 from pathlib import Path
+from keys import AWS_ACCESS_KEY_ID, AWS_SECRET_ACCESS_KEY
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -123,11 +124,11 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 DEFAULT_FILE_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
 
 # ------------------ Save static file in aws without uploading existing files from local machine
-AWS_ACCESS_KEY_ID = 'AKIAVBWB3FOLJYMJGFPA'
-AWS_SECRET_ACCESS_KEY = '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'
+AWS_ACCESS_KEY_ID
+AWS_SECRET_ACCESS_KEY
 AWS_STORAGE_BUCKET_NAME = 'django-test-bucket-2'
 AWS_QUERYSTRING_AUTH = False
-#
+
 AWS_LOCATION = 'static'
 
 # ------------------ Save file in aws with uploading files from local machine
@@ -147,7 +148,7 @@ STATICFILES_DIRS = [
 
 # STATIC_URL = '/static/'
 # MEDIA_URL = '/images/'
-# #
+
 # MEDIA_ROOT = os.path.join(BASE_DIR, 'static/images')
 # STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
